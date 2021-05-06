@@ -31,7 +31,12 @@ end
 Searches and adds the selected package into the current environment
 """
 function seadd()
-	Pkg.add(search())
+	x = search()
+	println("Do you want to add this package to the current environment? (y/n)")
+	i = readline()
+	if i == "y"
+		Pkg.add(x)
+	end
 end
 
 function installed()
@@ -81,5 +86,3 @@ function chkall()
 		println("All packages are on the latest version")
 	end
 end
-
-search()
