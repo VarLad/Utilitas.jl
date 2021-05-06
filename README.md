@@ -9,11 +9,11 @@ Some nifty Julia methods for package management. Taken from the Latin of the wor
 
 - seadd():  Searches and adds the selected package into the current environment
 
-- gelat(x::String):  Get the latest version of a package. Leaving the parameters empty will initiate a fuzzy search
+- gelat(String):  Get the latest version of a package. Leaving the parameters empty will initiate a fuzzy search
 
 - chkall():  Check if all the installed packages are at the latest version or not
 
-- chklat(x::String):  Compare the latest version of a package to the current version
+- chklat(String):  Compare the latest version of a package to the current version
 ```
 
 
