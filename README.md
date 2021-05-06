@@ -1,6 +1,8 @@
 # Utilitas.jl
 Some nifty Julia methods for package management. Taken from the Latin of the word "Utility".
 
+**Note**: _If you find a bug, or want a new feature, consider opening an issue for that_.
+
 ### Currently implemented methods
 ```
 - search():  Searches and returns the information of the selected package
