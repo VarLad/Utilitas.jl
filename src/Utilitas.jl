@@ -6,10 +6,10 @@ module Utilitas
 	using JLFzf: inter_fzf
 	using JSON3: read
 	
-	#function __init__()
-	#	reglist = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
-	#	k = [c for (b,c) in [a for (a, b) in values(reglist)]]
-	#end	
+	function __init__()
+		reglist = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
+		global k = [c for (b,c) in [a for (a, b) in values(reglist)]]
+	end	
 
 	export search, seadd, gelat, chklat, chkall
 	
