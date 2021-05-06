@@ -4,8 +4,8 @@ import JLFzf: inter_fzf
 import Pkg: add, dependencies
 import JSON3: read
 
-reglist = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
-k = [c for (b,c) in [a for (a, b) in values(reglist)]]
+#reglist = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
+#k = [c for (b,c) in [a for (a, b) in values(reglist)]]
 #v = collect(values(Dict(values(reglist))))
 #v = [v[i][2] for i in 1:length(v)]
 
