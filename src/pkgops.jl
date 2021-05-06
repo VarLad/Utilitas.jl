@@ -76,7 +76,12 @@ function chkall()
 	a = installed()
 	flag = false
 	for (i, j) in a
-		b = gelat(i)
+		b = ""
+		try
+			b = gelat(i)
+		catch e
+			continue
+		end
 		if(j != b)
 			flag = true
 			println("$(i)       Latest version = $(b) \t Current version = $(j)\n")
