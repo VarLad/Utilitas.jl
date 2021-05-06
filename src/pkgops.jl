@@ -4,6 +4,7 @@ import JLFzf: inter_fzf
 import Pkg: add, dependencies
 import JSON3: read
 
+const k = Ref()
 #reglist = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
 #k = [c for (b,c) in [a for (a, b) in values(reglist)]]
 #v = collect(values(Dict(values(reglist))))
@@ -13,7 +14,7 @@ import JSON3: read
 Searches and returns the information of the selected package
 """
 function search()
-	x = inter_fzf(k, "--read0")
+	x = inter_fzf(k[], "--read0")
 	if(x!="")
 		z = uppercase(x[1])
 		str = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/$(z)/$(x)/Package.toml", IOBuffer())))["repo"][20:end-4]
