@@ -1,2 +1,2 @@
 # Utilitas.jl
-Some nifty julia methods for package management
+Some nifty Julia methods for package management.
