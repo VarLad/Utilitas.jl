@@ -7,7 +7,7 @@ module Utilitas
 	using JSON3: read
 	
 	function __init__()
-		reglist = parse(see\kstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
+		reglist = parse(seekstart(download("https://raw.githubusercontent.com/JuliaRegistries/General/master/Registry.toml", IOBuffer())))["packages"]
 		k = [c for (b,c) in [a for (a, b) in values(reglist)]]
 	end	
 
