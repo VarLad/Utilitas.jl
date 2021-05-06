@@ -1,0 +1,11 @@
+name = "Utilitas"
+uuid = "cabe6626-fe56-4f11-b7b1-6cf1d19a3266"
+authors = ["Chetan Vardhan <1805204@kiit.ac.in> and contributors"]
+version = "0.1.0"
+
+[deps]
+JLFzf = "1019f520-868f-41f5-a6de-eb00f4b6a39c"
+
+[compat]
+julia = "1.6"
+
