@@ -63,7 +63,7 @@ end
 """
 Compare the latest version of a package to the current version
 """
-function chklat(x::String)
+function chklat(x::String = String(inter_fzf(collect(keys(installed())), "--read0")))
 	a = installed()[x]
 	y = gelat(x)
 	println("Installed version => $(a) \nLatest version => $(y)")
@@ -91,3 +91,5 @@ function chkall()
 		println("All packages are on the latest version")
 	end
 end
+
+chklat()
