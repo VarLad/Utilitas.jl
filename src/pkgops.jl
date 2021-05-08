@@ -91,5 +91,3 @@ function chkall()
 		println("All packages are on the latest version")
 	end
 end
-
-chklat()
